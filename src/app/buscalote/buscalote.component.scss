@@ -1,0 +1,78 @@
+// Personalizar el modal para hacerlo más ancho
+::ng-deep .modal-dialog {
+    max-width: 80%;  // Ancho del 80% del viewport
+    border-radius: 10px;  // Esquinas redondeadas
+  }
+  
+  .modal-title {
+    font-size: 16px;  // Ajusta el tamaño de la letra según lo que necesites
+  }
+  
+  .reducido {
+    width: 200px;  // Ajusta este valor para reducir el ancho del campo
+    margin-left: 10px; // Agrega margen si es necesario
+  }
+  
+
+
+  .cava-text {
+    font-size: 16px;  // Ajusta el tamaño del texto de "Cava"
+  }
+  
+  
+
+
+  .modal-header {
+    background-color: #b0c4de;  // Color gris azulado para el encabezado
+    border-top-left-radius: 10px; // Redondeo superior izquierdo
+    border-top-right-radius: 10px; // Redondeo superior derecho
+  }
+  
+  .modal-footer {
+    border-bottom-left-radius: 10px; // Redondeo inferior izquierdo
+    border-bottom-right-radius: 10px; // Redondeo inferior derecho
+  }
+  
+  .table thead th {
+    background-color: #b0c4de;  // Color gris azulado en los encabezados
+    color: white;  // Texto en blanco para contraste
+    text-align: center;  // Centrar el texto en los encabezados de la tabla
+    padding: 10px;  // Añadir padding para mejorar la legibilidad
+  }
+  
+  .table-container {
+    max-height: 400px;  // Limitar la altura del contenido
+    overflow-y: auto;   // Añadir scroll vertical si excede la altura
+    margin-bottom: 10px;  // Separar la tabla del pie de página
+  }
+  
+  // Asegura que la tabla ocupe todo el ancho
+  .table {
+    width: 80%;
+    table-layout: fixed;  // Establece un ancho fijo para las columnas
+    border-collapse: collapse;  // Colapsa los bordes de la tabla para un diseño más limpio
+    margin: 0 auto;      // Centra la tabla horizontalmente
+
+  }
+  
+  // Redefinir ancho de columnas específicas
+  .table th.col-producto {
+    width: 15%;  // Reducir el ancho de la columna Producto
+  }
+  
+  .table td, .table th {
+    padding: 8px;  // Espaciado en celdas
+    border: 1px solid #ddd;  // Bordes suaves entre celdas
+  }
+  
+  // Estilo para el scroll vertical
+  .table-container::-webkit-scrollbar {
+    width: 8px;  // Ancho del scroll
+  }
+  
+  .table-container::-webkit-scrollbar-thumb {
+    background-color: #b0c4de;  // Color del scroll
+    border-radius: 10px;  // Redondear el scroll
+  }
+  
+  

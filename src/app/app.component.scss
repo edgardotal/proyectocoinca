@@ -1,0 +1,83 @@
+html, body {
+  height: 100%; /* Asegura que el body y html tengan el alto completo */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+}
+
+.titulo {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 1; /* Para asegurar que no esté oculto por otros elementos */
+}
+
+.formulario {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+.menu {
+  background-color: navy;
+  width: 20%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 100%; /* Asegura que el menú abarque toda la altura del contenedor */
+}
+
+.opciones {
+  list-style-type: none;
+  padding: 0;
+  margin: 40px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea las opciones a la izquierda */
+}
+
+.opciones li {
+  margin: 20px 0;
+  color: white;
+  font-size: 2vw;
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+  line-height: 1.5;
+  transition: color 0.3s;
+  cursor: pointer;
+  padding-left: 30px; /* Opcional: Espacio entre el borde izquierdo y el texto */
+  width: 100%;
+}
+
+.opciones li:hover {
+  color: #800000;
+}
+
+.boton-centrado {
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+.btn-coinca {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-coinca:hover {
+  background-color: #0056b3;
+}
+

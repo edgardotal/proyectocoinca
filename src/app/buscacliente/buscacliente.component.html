@@ -1,0 +1,31 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="buscar-cliente-container text-center p-3">
+    <h4 class="buscar-cliente-titulo mb-2 small-title small">Buscar Cliente</h4>
+    <form class="buscar-cliente-form small-font">
+      <div class="form-group mb-2">
+        <label for="searchInput" class="form-label">Buscar</label>
+        <input 
+          type="text" 
+          class="form-control form-control-sm" 
+          id="searchInput" 
+          placeholder="Escribe para buscar" 
+          [formControl]="searchControl"
+          (keydown)="onSearchKeyDown($event)"
+          #searchInput
+        >
+      </div>
+      <ul class="list-group">
+        <li 
+          *ngFor="let cliente of filteredClientes; let i = index"
+          [attr.tabindex]="i === currentIndex ? 0 : -1"
+          [class.active]="i === currentIndex"
+          (keydown)="onRowKeyDown($event, i)"
+          (click)="selectCliente(cliente)"
+          class="list-group-item"
+        >
+          {{ cliente.nombre }} - {{ cliente.codigo }}
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>

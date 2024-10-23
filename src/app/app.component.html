@@ -1,0 +1,20 @@
+<!-- Menú que se muestra si el menú está visible -->
+<div class="menu" *ngIf="menuVisible">
+  <ul class="opciones">
+    <li (click)="showForm('recepcion')">Recepcion</li>
+    <li (click)="showForm('despacho')">Despacho</li>
+    <li (click)="showForm('cavas')">Cavas</li>
+  </ul>
+</div>
+
+<!-- Formulario que se muestra si el menú no está visible -->
+<div class="formulario" *ngIf="!menuVisible">
+  <!-- Aquí es donde se carga el componente hijo -->
+  <app-rformulariouno *ngIf="selectedForm === 'recepcion'" (reiniciar)="reiniciarComponente()"></app-rformulariouno>
+  <app-newdespacho *ngIf="selectedForm === 'despacho'" (reiniciar)="reiniciarComponente()"></app-newdespacho>
+  <app-contenedor-cavas *ngIf="selectedForm === 'cavas'" (reiniciar)="reiniciarComponente()"></app-contenedor-cavas>
+<!-- 
+  <div class="boton-centrado">
+    <app-botonpanel></app-botonpanel>
+  </div> -->
+</div>

@@ -1,0 +1,43 @@
+<div class="modal-header">
+  <h4 class="modal-title">
+    Seleccionar Lote <span class="cava-text">- Cava: {{ cava }}</span>
+  </h4>
+  <!-- Campo de búsqueda con clase personalizada para controlar el ancho -->
+  <input type="text" class="form-control lote-search reducido" placeholder="Buscar por lote" [(ngModel)]="loteFiltro" />
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+
+<div class="modal-body">
+  <div class="table-container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Ncontrol</th>
+          <th scope="col">Lote</th>
+          <th scope="col" class="col-producto">Producto</th>
+          <th scope="col">Bruto</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Cava</th>
+          <th scope="col">Fila</th>
+          <th scope="col">Nivel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lote of filtrarLotes()" (click)="seleccionarLote(lote)">
+          <td>{{ lote.ncontrol }}</td>
+          <td>{{ lote.lote }}</td>
+          <td>{{ lote.producto }}</td>
+          <td>{{ lote.bruto }}</td>
+          <td>{{ lote.fechar | date }}</td>
+          <td>{{ lote.c }}</td>
+          <td>{{ lote.f }}</td>
+          <td>{{ lote.n }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" (click)="activeModal.dismiss()">Cerrar</button>
+</div>

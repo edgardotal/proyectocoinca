@@ -1,0 +1,27 @@
+/* Colores alternos para las filas */
+.bg-light {
+  background-color: #f9f9f9; /* Gris claro */
+}
+
+.bg-secondary-light {
+  background-color: #f2f2f2; /* Gris menos claro */
+}
+
+/* Color de fondo cuando la fila está seleccionada o enfocada */
+.focused {
+  background-color: #b3e0f2 !important; /* Celeste pastel */
+  outline: none; /* Quita el marco de enfoque */
+  border: none;  /* Asegura que no haya borde */
+}
+
+/* Clase active para la fila seleccionada */
+.active {
+  background-color: #b3e0f2 !important; /* Asegura que active tenga también el color celeste pastel */
+  outline: none; /* Quita el marco de enfoque */
+  border: none;  /* Asegura que no haya borde */
+}
+
+.product-description {
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+  margin-left: 10; /* Asegura que no haya margen a la izquierda */
+}

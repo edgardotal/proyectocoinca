@@ -1,0 +1,49 @@
+<div class="form-container">
+  <!-- Contenedor para título -->
+  <div class="text-center mb-3">
+    <!-- <h3 class="small-header">Despacho de Productos</h3> -->
+  </div>
+
+  <!-- Formulario -->
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="mb-2 d-flex justify-content-between">
+      <div class="form-group" style="width: 203px;">
+        <label for="ncontrol" class="form-label">Nro. Control</label>
+        <input type="text" id="ncontrol" name="ncontrol" class="form-control" placeholder="Nro. Control" formControlName="ncontrol">
+      </div>
+
+      <div class="form-group" style="width: 203px;">
+        <label for="cliente" class="form-label">Cliente</label>
+        <input type="text" id="cliente" name="cliente" class="form-control" placeholder="Cliente" formControlName="cliente">
+      </div>
+
+      <div class="form-group" style="width: 203px;">
+        <label for="fecha" class="form-label">Fecha</label>
+        <input type="date" id="fecha" name="fecha" class="form-control" formControlName="fecha" [value]="currentDate">
+      </div>
+    </div>
+
+    <!-- Agrega los botones aquí -->
+    <div class="text-center mb-3">
+      <div class="d-flex flex-wrap justify-content-center">
+        <button type="button" class="btn btn-secondary m-1" (click)="openSearchLoteModal('C1')">C1</button>
+        <button type="button" class="btn btn-secondary m-1" (click)="openSearchLoteModal('C2')">C2</button>
+        <button type="button" class="btn btn-secondary m-1" (click)="openSearchLoteModal('C3')">C3</button>
+        <button type="button" class="btn btn-secondary m-1" (click)="openSearchLoteModal('C4')">C4</button>
+        <button type="button" class="btn btn-secondary m-1" (click)="openSearchLoteModal('C5')">C5</button>
+        <br>
+        <button type="button" class="btn btn-secondary m-1" (click)="openSearchLoteModal('C6')">C6</button>
+        <button type="button" class="btn btn-secondary m-1" (click)="openSearchLoteModal('C7')">C7</button>
+        <button type="button" class="btn btn-secondary m-1" (click)="openSearchLoteModal('C8')">C8</button>
+        <button type="button" class="btn btn-secondary m-1" (click)="openSearchLoteModal('C9')">C9</button>
+        <button type="button" class="btn btn-secondary m-1" (click)="openSearchLoteModal('C10')">C10</button>
+      </div>
+    </div>
+
+  
+    <!-- Botón de guardar -->
+    <div class="text-center mt-2">
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+  </form>
+</div>

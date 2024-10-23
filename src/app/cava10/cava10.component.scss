@@ -1,0 +1,127 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alineación al margen izquierdo */
+  justify-content: center;
+  padding: 0;
+  height: auto; /* Se ajusta al contenido */
+  overflow: hidden; /* Evitar scrolls horizontales */
+}
+
+.cava-container {
+  display: flex;
+  justify-content: flex-start; /* Alineación de los paneles */
+  padding: 0;
+  width: 100%;
+  gap: 20px; /* Espacio entre los paneles */
+}
+
+.left-side,
+.right-side {
+  flex: 1; /* Ocupa el mismo ancho */
+  padding: 0;
+  margin: 0; /* Sin márgenes exteriores */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alineación al margen izquierdo */
+  justify-content: flex-start; /* Alineación al inicio para ambos paneles */
+}
+
+.left-side {
+  margin-right: 10px; /* Espacio entre paneles */
+}
+
+.right-side {
+  margin-left: 10px; /* Espacio entre panel derecho y contenedor */
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alineación a la izquierda */
+  margin-bottom: 10px; /* Espacio entre filas */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin-left: 15px; /* Margen izquierdo para los elementos de la fila */
+}
+
+.row-title {
+  width: 40px; /* Fijar ancho para alinear todas las filas */
+  text-align: right; /* Alinea el texto de las etiquetas a la derecha */
+  margin-right: 10px; /* Espacio entre el título y los botones */
+  font-weight: bold;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alineación a la izquierda */
+  flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.horizontal-positions {
+  display: flex; /* Alinea los botones en línea */
+  gap: 10px; /* Espacio uniforme entre los botones */
+  flex-grow: 1; /* Permite que esta sección ocupe el espacio disponible */
+  justify-content: flex-start; /* Asegura que los botones estén alineados a la izquierda */
+}
+
+.horizontal-position {
+  background-color: #f1f1f1;
+  padding: 0; /* Eliminar padding para uniformidad */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 60px; /* Ancho de los cuadros */
+  text-align: center;
+  font-size: 6px; /* Tamaño de texto reducido */
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1px; /* Espacio entre cuadros */
+  height: 60px; /* Altura de los cuadros */
+}
+
+button {
+  padding: 4px 8px; /* Ajustar el padding para los botones */
+  margin: 0; /* Sin márgenes para asegurar consistencia */
+  width: auto; /* Botones ocupan el ancho automático */
+  display: flex; /* Cambia a flex para centrar el contenido */
+  align-items: center; /* Centra verticalmente el contenido del botón */
+  justify-content: center; /* Centra horizontalmente el contenido del botón */
+  text-align: center; /* Asegura que el texto esté centrado */
+  font-size: 12px; /* Tamaño de la fuente; ajusta según sea necesario */
+  border: 1px solid #ccc; /* Añade un borde si es necesario */
+  border-radius: 5px; /* Redondeo de los bordes */
+  background-color: #f1f1f1; /* Color de fondo; ajusta según el diseño */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+button.ocupado {
+  background-color: red; /* Color de fondo para el estado ocupado */
+  color: white; /* Color de texto en estado ocupado */
+}
+
+.vertical-position {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%; /* Ancho del contenedor vertical */
+  height: 100%; /* Altura del contenedor vertical */
+}
+
+.vertical-position div {
+  padding: 0; /* Elimina padding para reducir espacio */
+  width: 100%;
+  height: 50%; /* Altura de cada div dentro de .vertical-position */
+}
+
+.vertical-position div + div {
+  margin-top: 5px; /* Espacio superior entre divs */
+}
+
+.mat-accordion {
+  margin-top: 20px; /* Espacio superior para separar el acordeón */
+}

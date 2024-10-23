@@ -1,0 +1,49 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="buscar-producto-container text-center p-3">
+    <h4 class="buscar-producto-titulo mb-2 small-title">Buscar Producto</h4>
+    <form class="buscar-producto-form small-font">
+      <div class="form-group mb-2">
+        <label for="searchInput">Buscar</label>
+        <input 
+          type="text" 
+          class="form-control form-control-sm" 
+          id="searchInput" 
+          placeholder="Escribe para buscar" 
+          [formControl]="searchControl"
+          (keydown)="onSearchKeyDown($event)"
+          #searchInput
+        >
+      </div>
+
+      <!-- Encabezados de la tabla -->
+      <div class="row font-weight-bold mb-2">
+        <div class="col-2 text-center">Código</div>
+        <div class="col-5 text-center">Descripción</div> <!-- Alineación centrada -->
+      </div>
+
+      <ul class="list-group">
+        <li 
+          *ngFor="let product of filteredProducts; let i = index"
+          [attr.tabindex]="i === currentIndex ? 0 : -1"
+          [class.active]="i === currentIndex"
+          (keydown)="onRowKeyDown($event, i)"
+          (click)="selectProduct(product)"
+          class="list-group-item d-flex align-items-center"
+          [ngClass]="{
+            'bg-light': i % 2 === 0, 
+            'bg-secondary-light': i % 2 !== 0, 
+            'focused': i === currentIndex
+          }"
+          style="color: black;"
+        >
+          <!-- Columna de Código -->
+          <div class="col-2 text-center product-codigo">{{ product.codigo }}</div>
+          <!-- Columna de Descripción ajustable, sin truncado -->
+          <div class="col-5 text-left product-description" style="margin-left: 20px; white-space: normal; overflow: visible;">
+            {{ product.descripcion }}
+          </div>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>

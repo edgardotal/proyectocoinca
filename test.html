@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test POST Request</title>
+</head>
+<body>
+  <button id="sendRequest">Send POST Request</button>
+  <script>
+    document.getElementById('sendRequest').addEventListener('click', () => {
+      fetch('http://localhost:3000/api/totales', {  // Cambiar la ruta a /api/totales
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          ncontrol: 1,  // Número de control (ejemplo)
+          codcli: 'Cliente 1',  // Código del cliente (ejemplo)
+          fechar: '2024-09-01',  // Fecha (ejemplo)
+          totales: {
+            totalBruto: 500,
+            totalTara: 75,
+            totalNeto: 425,
+            tcg25: 20,
+            tcg24: 15,
+            tcg23: 10,
+            tcg22: 5,
+            tcm: 2,
+            tcp: 3,
+            testiba: 1,
+            tcestas: 10,
+            tbultos: 5,
+            tunidad: 20
+          }
+        })
+      })
+      .then(response => response.json())
+      .then(data => console.log('Success:', data))
+      .catch((error) => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>

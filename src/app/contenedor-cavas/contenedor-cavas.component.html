@@ -1,0 +1,43 @@
+<div class="container mt-4">
+  <!-- Primer Div - Cavas Refrigerantes tipo A -->
+  <div class="row" style="background: #f0f0f0; padding: 15px; border-radius: 10px;">
+    <div class="col-12 text-center">
+      <h6>Cavas</h6>
+    </div>
+    <div class="row justify-content-center mt-3">
+      <div class="col-2 d-flex justify-content-center mb-3" *ngFor="let cava of cavas.slice(0, 4); let i = index">
+        <button type="button" class="btn btn-primary btn-block" (click)="openCavaModal(i)"> 
+          {{ cava }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Segundo Div - Cavas Refrigerantes tipo B -->
+  <div class="row mt-4" style="background: #dcdcdc; padding: 15px; border-radius: 10px;">
+    <div class="col-12 text-center">
+      <h6></h6>
+    </div>
+    <div class="row justify-content-center mt-3">
+      <div class="col-2 d-flex justify-content-center mb-3" *ngFor="let cava of cavas.slice(4, 8); let i = index">
+        <button type="button" class="btn btn-primary btn-block" (click)="openCavaModal(i + 4)"> 
+          {{ cava }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tercer Div - Cavas Refrigerantes tipo C -->
+  <div class="row mt-4" style="background: #b0b0b0; padding: 15px; border-radius: 10px;">
+    <div class="col-12 text-center">
+      <h6></h6>
+    </div>
+    <div class="row justify-content-center mt-3">
+      <div class="col-2 d-flex justify-content-center mb-3" *ngFor="let cava of cavas.slice(8, 10); let i = index">
+        <button type="button" class="btn btn-primary btn-block" (click)="openCavaModal(i + 8)"> 
+          {{ cava }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

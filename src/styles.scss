@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-card {
+  margin: 8px;
+  max-width: 100%;  // Asegúrate de que el ancho máximo sea el deseado
+}
+
+mat-grid-list {
+  margin: 16px 0;
+  width: 100%;  // Asegúrate de que el ancho sea el deseado
+}
+  
+mat-grid-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e0e0;
+  border: 1px solid #bdbdbd;
+  width: 100%;  // Asegúrate de que el ancho sea el deseado
+}
+  
+  mat-card {
+    margin-bottom: 16px;
+  }
+  
+  .form-container {
+    max-width: 100%;  // Asegúrate de que el formulario no esté limitado en ancho
+    padding: 16px;    // Añadir relleno si es necesario
+    box-sizing: border-box;  // Asegúrate de que el padding no afecte el ancho
+  }
+  
+  .form-container .form-group {
+    margin-bottom: 1rem;  // Espaciado entre campos de formulario
+  }
+  
+  .form-container .form-control {
+    width: 100%;  // Asegúrate de que los campos se ajusten al contenedor
+  }
+  
+  .form-container .btn {
+    margin-top: 1rem;  // Espaciado en el botón de enviar
+  }
+  
+  .modal-fullscreen {
+    position: fixed;  /* Mantener la posición fija */
+    top: 0;          /* Alinear al tope de la pantalla */
+    left: 0;         /* Alinear a la izquierda de la pantalla */
+    width: 100%;     /* Ancho completo */
+    height: 100%;    /* Altura completa */
+    margin: 0;       /* Sin márgenes */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    z-index: 1050;   /* Asegúrate de que esté por encima de otros elementos */
+  }
+  
+  .modal-content {
+    height: auto;    /* Permitir altura automática para el contenido */
+    max-height: 90vh; /* Máxima altura para evitar desbordamiento */
+    overflow-y: auto; /* Habilitar desplazamiento si el contenido es demasiado grande */
+    border: none;    /* Eliminar bordes */
+    border-radius: 0; /* Eliminar bordes redondeados */
+  }
+  

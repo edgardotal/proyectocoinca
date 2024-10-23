@@ -1,0 +1,80 @@
+.form-container {
+  background-color: #f0f0f0; /* Gris claro */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+
+/* Estilo para el título */
+.small-header {
+  font-size: 18px; /* Tamaño de fuente para el título */
+  color: #000; /* Color negro */
+}
+
+/* Estilo para los elementos del formulario */
+.form-group input {
+  font-size: 16px; /* Tamaño de fuente para los campos de entrada */
+}
+
+.form-label {
+  font-size: 16px; /* Tamaño de fuente para las etiquetas de los campos */
+}
+
+/* Estilo para los ítems de la lista */
+.list-group-item {
+  font-size: 14px; /* Tamaño de fuente para los ítems de la lista */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Elimina los espacios entre celdas */
+  margin-top: 20px;
+  font-family: Arial, sans-serif; /* Cambia la fuente */
+  font-size: 12px; /* Tamaño de fuente para toda la tabla */
+  border: 1px solid #ddd; /* Color del borde de la tabla */
+  border-radius: 8px; /* Bordes redondeados de la tabla */
+  overflow: hidden; /* Oculta los bordes redondeados */
+}
+
+th, td {
+  border: 1px solid #ddd; /* Color del borde de las celdas */
+  padding: 12px; /* Espacio interno en las celdas */
+  text-align: left; /* Alineación del texto */
+  font-weight: bold; /* Texto en negrita */
+  position: relative; /* Necesario para los bordes */
+}
+
+th {
+  background-color: #4A6A7C; /* Color de fondo de las cabeceras */
+  color: white; /* Color del texto en las cabeceras */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+
+tr:hover {
+  background-color: #ddd; /* Color de fondo al pasar el mouse */
+}
+
+tbody tr {
+  transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Para asegurar que se muestre el borde al final de cada fila */
+tbody tr:last-child td {
+  border-bottom: 2px solid #4A6A7C; /* Borde inferior más grueso en la última fila */
+}
+
+/* Para Webkit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus {
+  outline: none; /* Quita el borde negro al recibir foco */
+}

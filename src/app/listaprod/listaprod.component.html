@@ -1,0 +1,14 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Buscar producto:</mat-label>
+    <input matInput formControlName="searchTerm" placeholder="Ingrese el nombre del producto" (input)="filterProducts()" />
+  </mat-form-field>
+  
+  <mat-selection-list>
+    <mat-list-option *ngFor="let product of filteredProducts" [value]="product.id" (click)="selectProduct(product)">
+      {{ product.descripcion }}
+    </mat-list-option>
+  </mat-selection-list>
+  
+  <button mat-raised-button color="primary" type="submit">Enviar</button>
+</form>

@@ -1,0 +1,27 @@
+<div class="main-container">
+  <h6>Cava refrigerante 9</h6> 
+  <div class="cava-container">
+    <div class="left-side">
+      <p>Panel Izquierdo</p>
+      <div class="left-panel-content">
+        <!-- Invertir el orden de las filas usando slice -->
+        <div class="row" *ngFor="let row of positionsLeft.slice().reverse(); let rowIndex = index">
+          <div class="horizontal">
+            <div class="row-title">{{ row.id }}</div>
+            <div class="horizontal-positions">
+              <ng-container *ngFor="let horizontal of row.horizontals; let horizontalIndex = index">
+                <button mat-button
+                  (click)="openDialog(horizontal, 'N1')"
+                  [ngClass]="{
+                    'ocupado': horizontal.verticals[0].status === 1,
+                    'disponible': horizontal.verticals[0].status === 0
+                  }">
+ P{{ horizontalIndex + 1 }}-N1                </button>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

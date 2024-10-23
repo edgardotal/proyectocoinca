@@ -1,0 +1,120 @@
+<div class="main-container">
+  <h6>Cava refrigerante 7</h6> <!-- Título agregado -->
+
+  <div class="cava-container">
+    <div class="left-side">
+      <p>Panel Izquierdo</p>
+      <div class="left-panel-content"> <!-- Contenedor -->
+        <div *ngFor="let row of positionsLeft" class="row">
+          <div class="horizontal">
+            <div class="row-title">{{ row.id }}</div>
+            <div *ngFor="let horizontal of row.horizontals; let horizontalIndex = index" class="horizontal-position">
+              <div class="vertical-position">
+                <ng-container *ngIf="row.id === 'F1'">
+                  <!-- Botón para N3 -->
+                  <button mat-button
+                    (click)="openDialog(horizontal, 'N3')"
+                    [ngClass]="{
+                      'ocupado': horizontal.verticals[2].status === 1,
+                      'disponible': horizontal.verticals[2].status === 0
+                    }">
+                    P{{ 4 - horizontalIndex }}-N3
+                  </button>
+                  <!-- Botón para N2 -->
+                  <button mat-button
+                    (click)="openDialog(horizontal, 'N2')"
+                    [ngClass]="{
+                      'ocupado': horizontal.verticals[1].status === 1,
+                      'disponible': horizontal.verticals[1].status === 0
+                    }">
+                    P{{ 4 - horizontalIndex }}-N2
+                  </button>
+                  <!-- Botón para N1 -->
+                  <button mat-button
+                    (click)="openDialog(horizontal, 'N1')"
+                    [ngClass]="{
+                      'ocupado': horizontal.verticals[0].status === 1,
+                      'disponible': horizontal.verticals[0].status === 0
+                    }">
+                    P{{ 4 - horizontalIndex }}-N1
+                  </button>
+                </ng-container>
+                <ng-container *ngIf="row.id !== 'F1'">
+                  <!-- Botón para N3 -->
+                  <button mat-button
+                    (click)="openDialog(horizontal, 'N3')"
+                    [ngClass]="{
+                      'ocupado': horizontal.verticals[2].status === 1,
+                      'disponible': horizontal.verticals[2].status === 0
+                    }">
+                    P{{ horizontalIndex + 1 }}-N3
+                  </button>
+                  <!-- Botón para N2 -->
+                  <button mat-button
+                    (click)="openDialog(horizontal, 'N2')"
+                    [ngClass]="{
+                      'ocupado': horizontal.verticals[1].status === 1,
+                      'disponible': horizontal.verticals[1].status === 0
+                    }">
+                    P{{ horizontalIndex + 1 }}-N2
+                  </button>
+                  <!-- Botón para N1 -->
+                  <button mat-button
+                    (click)="openDialog(horizontal, 'N1')"
+                    [ngClass]="{
+                      'ocupado': horizontal.verticals[0].status === 1,
+                      'disponible': horizontal.verticals[0].status === 0
+                    }">
+                    P{{ horizontalIndex + 1 }}-N1
+                  </button>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Fin del contenedor -->
+    </div>
+
+    <div class="right-side">
+      <p>Panel Derecho</p>
+      <div class="right-panel-content">
+        <div *ngFor="let row of positionsRight" class="row">
+          <div class="horizontal">
+            <div class="row-title">{{ row.id }}</div>
+            <div *ngFor="let horizontal of row.horizontals; let horizontalIndex = index" class="horizontal-position">
+              <div class="vertical-position">
+                <!-- Botón para N3 -->
+                <button mat-button
+                  (click)="openDialog(horizontal, 'N3')"
+                  [ngClass]="{
+                    'ocupado': horizontal.verticals[2].status === 1,
+                    'disponible': horizontal.verticals[2].status === 0
+                  }">
+                  P{{ 4 - horizontalIndex }}-N3
+                </button>
+                <!-- Botón para N2 -->
+                <button mat-button
+                  (click)="openDialog(horizontal, 'N2')"
+                  [ngClass]="{
+                    'ocupado': horizontal.verticals[1].status === 1,
+                    'disponible': horizontal.verticals[1].status === 0
+                  }">
+                  P{{ 4 - horizontalIndex }}-N2
+                </button>
+                <!-- Botón para N1 -->
+                <button mat-button
+                  (click)="openDialog(horizontal, 'N1')"
+                  [ngClass]="{
+                    'ocupado': horizontal.verticals[0].status === 1,
+                    'disponible': horizontal.verticals[0].status === 0
+                  }">
+                  P{{ 4 - horizontalIndex }}-N1
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
